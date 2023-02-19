@@ -152,36 +152,24 @@ div #imgReunion {
 .b1 {
     grid-row: 2;
     grid-column: 2 / 3;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     background-color: #fd896987;
 }
 
 .b2 {
     grid-row: 2;
     grid-column: 5 / 6;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     background-color: #11417d;
 }
 
 .b3 {
     grid-row: 2;
     grid-column: 8 / 9;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     background-color: #47a18b;
 }
 
 .b4 {
     grid-row: 2;
     grid-column: 11 / 12;
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
     background-color: #989999;
 }
 
@@ -281,7 +269,7 @@ footer {
 #iconContainer {
     padding-top: 5px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
 }
 
 #iconContainer .icon {
@@ -290,6 +278,10 @@ footer {
     width: 30px;
     height: 30px;
     align-items: center;
+}
+
+.iconContainer div {
+    /* padding-right: 10px; */
 }
 
 .icon {
