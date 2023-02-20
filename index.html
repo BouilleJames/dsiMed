@@ -59,7 +59,7 @@
     </main>
     <footer>
         <div id="contact" class="downLeft">
-            <h2>CONTACTEZ NOUS</h2>
+            <h2 id="sansSerif">CONTACTEZ NOUS</h2>
             <p>80 Route des Lucioles</p>
             <p>Les Espaces de Sophia</p>
             <p>Batiment K</p>
@@ -72,15 +72,16 @@
                 <div><a class="icon" href="#"><i class="fa-brands fa-linkedin-in"></i></a></div>
             </div>
         </div>
+        <div id="ligneSeparator"><span></span></div>
         <div id="formulaire" class="downRight">
             <form method="post" action="traitement.php">
-                <label for="name">Nom Prénom</label>
-                <input type="text" name="" id="name">
-                <label for="entreprise">Entreprise</label>
-                <input type="text" name="" id="entreprise">
-                <label for="mail">Email</label>
-                <input type="text" name="" id="mail">
-                <input type="submit" value="Envoyer">
+                <div class="group"><label for="name">Nom Prénom</label>
+                    <input type="text" name="" id="name"></div>
+                <div class="group"><label for="entreprise">Entreprise</label>
+                    <input type="text" name="" id="entreprise"></div>
+                <div class="group"><label for="mail">Email</label>
+                    <input type="text" name="" id="mail"></div>
+                <div class="group"><input class="button" type="submit" value="Envoyer"></div>
             </form>
         </div>
     </footer>
