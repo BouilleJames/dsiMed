@@ -23,8 +23,7 @@ a, a:hover {
 
 nav {
     background: #989999;
-    padding: 5px;
-    
+    padding: 5px;  
 }
 
 nav a {
@@ -69,6 +68,9 @@ nav a:hover {
     font-size: 30px;
     display: none;
 }
+@media screen and (max-width: 1300px) {
+    
+}
 
 @media screen and (max-width: 600px) {
     nav{
@@ -77,6 +79,12 @@ nav a:hover {
         padding: 15px 20px;
 }   
     .burger{
+    }
+    #ligneSeparator {
+        height: 200px;
+        border-right: 0;
+        border-bottom: 2px solid #fff;
+        margin-top: 15%;
     }
 }
 
@@ -177,6 +185,7 @@ div #imgReunion {
     justify-content: center;
     text-align: center;
     text-transform: uppercase;
+    font-size: 48px;
 }
 
 
