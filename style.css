@@ -315,4 +315,9 @@ footer {
     height: auto;
     display: flex;
     justify-content: center;
+    margin-top: 15px;
+}
+
+#spaceIcon {
+    margin: 0 15px 0 15px;
 }
