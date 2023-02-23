@@ -1,106 +1,192 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-* {
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(220, 220, 220);
 }
-
-/* font-family: 'Audiowide', cursive;
-font-family: 'Roboto', sans-serif; */
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Audiowide', cursive;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: rgb(220, 220, 220);
 }
 
 a, a:hover {
     text-decoration: none;
 }
 
-nav {
-    background: #989999;
-    padding: 5px;  
-}
-
-nav a {
-    color: #000000;
-}
-
-nav a:hover {
-    color: #11417d;
-}
-
-.logo a {
+.header {
+    background-color: #989999;
+    width: calc(100% - 40px);
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
     display: flex;
     align-items: center;
-    font-size: 20px;
+    justify-content: space-between;
+    padding: 0px 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.logo a:hover {
-    color: #11417d;
-}
-
-.logo img {
-    width: 100px;
-}
-
-.menu {
+.header__logo img {
+    max-height: 70px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+}
+
+.header__nav__menu {
+    padding: 0;
+    margin: 0;
     list-style: none;
-    height: 143.4px;
+    display: flex;
+    align-items: center;
+
 }
 
-.menu li {
-    padding: 15px 10px;
-    font-size: 16px;
+.header__nav__menu__link {
+    margin-right: 20px;
 }
-.menu li a {
+
+
+.header__nav__menu__link:last-of-type {
+    margin-right: initial;
+}
+
+.header__nav__menu__link a {
+    color: #0c0c0c;
+    font-weight: 400;
     text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    position: relative;
 }
 
-.burger {
-    font-size: 30px;
+.header__nav__menu__link a:after {
+    content: '';
+    height: 2px;
+    background-color: #fff;
+    width: 0;
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    transition: 0.2s all ease-in-out;
+}
+
+.header__nav__menu__link a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+.header__burger {
+    display: none;
+
+}
+
+.header__burger svg {
+    stroke: #fff;
+    width: 22px;
+    height: 22px;
+}
+
+.header__nav__close {
     display: none;
 }
-@media screen and (max-width: 1300px) {
-    
+
+@media screen and (max-width: 850px) {
+
+    .header__burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .header__nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 300px;
+        height: 100vh;
+        background-color: #374151;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: none;
+    }
+
+    .header__nav.open {
+        display: flex;
+        animation: transformMenu 300ms ease-in-out forwards;
+    }
+
+    @keyframes transformMenu {
+        0% {
+            transform: translateX(100%);
+        }
+
+        100% {
+            transform: initial;
+        }
+    }
+
+    .header__nav__menu {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header__nav__menu__link {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .header__nav__menu__link a {
+        font-size: 25px;
+    }
+
+    .header__nav__close {
+        display: block;
+        cursor: pointer;
+        
+    }
+
+    .header__nav__close svg {
+        stroke: #fff;
+        width: 22px;
+        height: 22px;
+        position: absolute;
+        top: 16px;
+        right: 16px;
+    }
+
+    .overlay-menu-mobile {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.6);
+        display: none;
+    }
+
+    .overlay-menu-mobile.open {
+        display: block;
+    }
+
 }
 
-@media screen and (max-width: 600px) {
-    nav{
-        display: block;
-        position: relative;
-        padding: 15px 20px;
-}   
-    .burger{
-    }
-    #ligneSeparator {
-        height: 200px;
-        border-right: 0;
-        border-bottom: 2px solid #fff;
-        margin-top: 15%;
-    }
+@media screen and (min-width: 851px) and (max-width: 1000px) {
+    .header__nav__menu__link a {
+        font-size: 12px;
 }
+}
+
+/* **********************Banniere************************* */
 
 .banniere {
     height: 623px;
     background: linear-gradient(#11417d, #fff);
-    /* background: radial-gradient(#11417d, #fff); */
 }
 
 div #imgReunion {
     height: 450px;
     margin: 25px 0 25px 150px;
-}
-
-.shadow {
-    box-shadow: 10px 5px 5px #989999;
 }
 
 .colorText {
@@ -112,7 +198,6 @@ div #imgReunion {
     justify-content: space-evenly;
     align-items: center;
     padding-top: 70px;
-
 }
 
 #floatLeft h1 {
@@ -128,6 +213,44 @@ div #imgReunion {
 .cda span {
     color: #fd8a69;
 }
+
+@media screen and (max-width: 1300px) {
+    .banniere {
+        height: auto;
+    }
+    .cda{
+        display: flex;
+        flex-direction: column;
+    }
+    #floatLeft {
+        display: flex;
+        flex-direction: column;
+    }
+    #floatLeft p {
+        line-height: 30px;
+    }
+    #containerImg .imgReunion {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    #containerImg {
+        padding-bottom: 50px;
+    }
+    div #imgReunion {
+        margin: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #containerImg {
+        max-width: 300px;
+    }
+}
+
+/* ******************Main******************** */
 
 .container {
     display: grid;
@@ -148,6 +271,7 @@ div #imgReunion {
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 30px;
 }
 
 .b1 {
@@ -186,6 +310,7 @@ div #imgReunion {
     text-align: center;
     text-transform: uppercase;
     font-size: 48px;
+    font-weight: 400;
 }
 
 
@@ -230,7 +355,7 @@ div #imgReunion {
     grid-column: 1 / 13;
     display: flex;
     justify-content: center;
-    
+    max-width: auto;
 }
 
 .graphic #camembert {
@@ -238,10 +363,82 @@ div #imgReunion {
     border-radius: 10px;
 }
 
+@media screen and (max-width: 1300px) {
+    .boxCentrale {
+        max-width: 134px;
+        max-height: 134px;
+    }
+    #titreCentral {
+        font-size: 48px;
+        margin: 0 200px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: repeat(12, 1fr);
+    }
+    #titreCentral {
+        grid-row: 2 / 3;
+        grid-column: 1 / 13;
+        font-size: 23px;
+    }
+    .b1 {
+        grid-row: 4;
+        grid-column: 3 / 5;
+        margin-top: 40px;
+    }
+    .b2 {
+        grid-row: 4;
+        grid-column: 9 / 11;
+        margin-top: 80px;
+    }
+    .b3 {
+        grid-row: 5;
+        grid-column: 3 / 5;
+    }
+    .b4 {
+        grid-row: 5;
+        grid-column: 9 / 11;
+        margin-top: 40px;
+    }
+    .b5 {
+        grid-row: 6;
+        grid-column: 9 / 11;
+        margin-top: 40px;
+    }
+    .b6 {
+        grid-row: 7;
+        grid-column: 3 / 5;
+        margin-top: 40px;
+
+    }
+    .b7 {
+        grid-row: 6;
+        grid-column: 3 / 5;
+        margin-top: 80px;
+    }
+    .b8 {
+        grid-row: 7;
+        grid-column: 9 / 11;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #titreCentral {
+        font-size: 20px;
+    }
+}
+
+/* *********************************FOOTER******************************** */
+
 footer {
-    height: 300px;
+    height: 695px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     background: linear-gradient(#11417d, #fff);
 }
 
@@ -266,8 +463,8 @@ footer {
     box-shadow: 10px 5px 5px #989999;
     height: 80%;
     justify-content: center;
-    margin-top: 40px;
     color: #fff;
+    margin-top: 100px;
 }
 
 .group {
@@ -282,9 +479,9 @@ footer {
 }
 
 #ligneSeparator {
-    height: 200px;
+    height: 380px;
     border-right: 2px solid #fff;
-    margin-top: 15%;
+    margin-top: 100%;
 }
 
 #contact h2 {
@@ -304,8 +501,8 @@ footer {
 #iconContainer .icon {
     background: #ffff;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     align-items: center;
 }
 
@@ -320,4 +517,34 @@ footer {
 
 #spaceIcon {
     margin: 0 15px 0 15px;
+}
+
+@media screen and (max-width: 600px) {
+    footer {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #contact {
+        width: 100%;
+        text-align: center;
+    }
+
+    .social {
+        width: 80px;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #iconContainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    #formulaire {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
 }
