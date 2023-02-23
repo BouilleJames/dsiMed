@@ -13,6 +13,14 @@ a, a:hover {
     text-decoration: none;
 }
 
+.shadow a {
+    text-shadow: 5px 5px 4px 0 #ffffff;
+}
+
+.shadow {
+    box-shadow: 10px 5px 5px #a1a1a1;
+}
+
 .header {
     background-color: #989999;
     width: calc(100% - 40px);
@@ -453,6 +461,15 @@ footer {
     flex-direction: column;
     justify-content: center;
     color: #ffff;
+}
+
+#contact p {
+    font-size: 16px;
+}
+
+#lienDsi {
+    color: #ffffff;
+    font-size: 16px;
 }
 
 #formulaire {
