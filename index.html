@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
@@ -19,7 +20,8 @@
     <div class="overlay-menu-mobile" onclick="closeMenuMobile()"></div>
     <header class="header">
         <div class="header__logo">
-            <img src="logoDsiMed.png" alt="logo Dsi Méditerannée">
+            <img id="logo" src="logoDsiMed.png" alt="logo Dsi Méditerannée">
+            <img id="logoUn" src="logoDsiMed-removebg-preview.png" alt="logo Dsi Méditerannée">
         </div>
         <nav class="header__nav">
             <div class="header__nav__close" onclick="closeMenuMobile()">
@@ -74,6 +76,7 @@
                 </p>
             </div>
             <div id="containerImg"><img id="imgReunion" src="imgReunion.PNG" alt="img d'une réunion"></div>
+            <div id="containerImg"></div>
         </div>
 
     </div>
@@ -91,7 +94,7 @@
         <div class="boxCentrale shadow box b4"><a href="#">
                 <p class="colorText">particularité du recrutement</p>
             </a></div>
-        <h2 id="titreCentral">découvrez nos conseils</h2>
+        <div id="titreC"><h2 id="titreCentral">découvrez nos conseils</h2></div>
         <div class="boxCentrale shadow box b5"><a href="#">
                 <p class="colorText">le maintien dans l'emploi</p>
             </a></div>
@@ -106,7 +109,7 @@
             </a></div>
         <div class="graphic">
             <img id="camembert" src="camembert.PNG" alt="statistiques avec camembert graphique">
-            <!-- <img id="camembertMobile" src="charts_mobile.jpg" alt="statistiques avec camembert graphique" srcset="camembert.PNG 847w, charts_mobile.jpg 853w" /> -->
+            <img id="camembertMobile" src="charts_mobile.jpg" alt="statistiques avec camembert graphique" srcset="camembert.PNG 847w, charts_mobile.jpg 853w" />
         </div>
     </main>
     <footer>

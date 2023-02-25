@@ -24,7 +24,7 @@ a, a:hover {
 .header {
     background-color: #989999;
     width: calc(100% - 40px);
-    height: 70px;
+    height: 183px;
     position: fixed;
     top: 0;
     left: 0;
@@ -33,12 +33,11 @@ a, a:hover {
     justify-content: space-between;
     padding: 0px 20px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    position: relative;
 }
 
-.header__logo img {
-    max-height: 70px;
-    display: flex;
-    align-items: center;
+.header__logo img:nth-child(2) {
+    display: none;
 }
 
 .header__nav__menu {
@@ -99,23 +98,38 @@ a, a:hover {
     display: none;
 }
 
+@media screen and (max-width: 1150px) {
+    .header__nav__menu__link a {
+        font-size: 14px;
+    }
+    .header__logo img {
+        height: 120px;
+    }
+}
+
 @media screen and (max-width: 850px) {
 
     .header__burger {
         display: block;
         cursor: pointer;
     }
+    .header__burger svg {
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+    }
 
     .header__nav {
         position: fixed;
-        top: 0;
+        top: 183px;
         right: 0;
-        width: 300px;
-        height: 100vh;
+        z-index: 99;
+        width: 250px;
+        height: 90vh;
         background-color: #374151;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         display: none;
     }
 
@@ -145,7 +159,7 @@ a, a:hover {
     }
 
     .header__nav__menu__link a {
-        font-size: 25px;
+        font-size: 20px;
     }
 
     .header__nav__close {
@@ -159,8 +173,8 @@ a, a:hover {
         width: 22px;
         height: 22px;
         position: absolute;
-        top: 16px;
-        right: 16px;
+        top: 10px;
+        right: 10px;
     }
 
     .overlay-menu-mobile {
@@ -180,9 +194,39 @@ a, a:hover {
 }
 
 @media screen and (min-width: 851px) and (max-width: 1000px) {
+    .header {
+        /* height: 70px; */
+    }
     .header__nav__menu__link a {
         font-size: 12px;
+    }
+    .header__logo img {
+        height: 100px;
+    }
 }
+
+@media screen and (max-width: 601px) and (max-width: 850px) {
+    .header__nav {
+        top: 70px;
+    }
+    .header__logo img {
+        display: none;
+    }
+    .header__logo img:nth-child(2) {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 601px) {
+    .header {
+        background-color: #ffff;
+    }
+    .header__burger svg {
+        background-color: #989999;
+        width: 35px;
+        height: 35px;
+        border-radius: 10px;
+    }
 }
 
 /* **********************Banniere************************* */
@@ -190,10 +234,12 @@ a, a:hover {
 .banniere {
     height: 623px;
     background: linear-gradient(#11417d, #fff);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+    position: relative;
 }
 
 div #imgReunion {
-    height: 450px;
+    /* height: 450px; */
     margin: 25px 0 25px 150px;
 }
 
@@ -235,7 +281,10 @@ div #imgReunion {
         flex-direction: column;
     }
     #floatLeft p {
-        line-height: 30px;
+        line-height: 40px;
+    }
+    #floatLeft h1 {
+        font-size: 50px;
     }
     #containerImg .imgReunion {
         display: flex;
@@ -252,10 +301,18 @@ div #imgReunion {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 600px) and (max-width: 600px) {
     #containerImg {
-        max-width: 300px;
+        max-width: 100%;
     }
+    #imgReunion {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (min-width: 600px) {
+
 }
 
 /* ******************Main******************** */
@@ -282,6 +339,10 @@ div #imgReunion {
     line-height: 30px;
 }
 
+main div > a {
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.350);
+}
+
 .b1 {
     grid-row: 2;
     grid-column: 2 / 3;
@@ -306,12 +367,17 @@ div #imgReunion {
     background-color: #989999;
 }
 
+#titreC {
+    grid-row: 4;
+    grid-column: 1 / 13;
+}
+
 #titreCentral {
     border: 1px solid #989999;
-    border-radius: 10px;
-    color: #989999;
-    grid-row: 4;
-    grid-column: 2 / 12;
+    border-radius: 20px;
+    margin: 0 50px;
+    padding: 20px;
+    color: #6c757d;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -371,27 +437,36 @@ div #imgReunion {
     border-radius: 10px;
 }
 
-@media screen and (max-width: 1300px) {
-    .boxCentrale {
-        max-width: 134px;
-        max-height: 134px;
-    }
-    #titreCentral {
-        font-size: 48px;
-        margin: 0 200px;
-    }
+.graphic #camembertMobile {
+    display: none;
 }
-
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1350px) {
     .container {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(12, 1fr);
+        background-color: #ffff;
     }
-    #titreCentral {
-        grid-row: 2 / 3;
+    .graphic {
+        grid-row: 8 / 13;
         grid-column: 1 / 13;
-        font-size: 23px;
+        display: flex;
+        justify-content: center;
+        max-width: auto;
+        margin: 33px 20px;
+    }
+    .graphic #camembert {
+        display: none;
+    }
+    .graphic #camembertMobile {
+        display: flex;
+    }
+    #titreC {
+        grid-row: 1 / 2;
+        grid-column: 1 / 13;
+        margin: 100px 27px 0 27px;
+        max-height: 100px;
+    }
+    #titreC h2 {
+        background-color: #989999;
+        color: #585858;
     }
     .b1 {
         grid-row: 4;
@@ -433,10 +508,44 @@ div #imgReunion {
         grid-column: 9 / 11;
     }
 }
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1300px) {
+    .boxCentrale {
+        /* max-width: 134px;
+        max-height: 134px; */
+    }
     #titreCentral {
-        font-size: 20px;
+        font-size: 48px;
+    }
+    .graphic #camembertMobile {
+        display: flex;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container {
+        background-color: #ffffff;
+    }
+    #titreCentral {
+        font-size: 23px;
+        line-height: 30px;
+        font-weight: 400;
+    }
+    #titreC h2 {
+        background-color: #d9d9d9;
+    }
+    .container #titreC h2 {
+        display: flex;
+        padding: 10px 100px;
+        /* margin: 100px 50px 0 50px; */
+    }
+    .box {
+        width: 134px;
+        height: 134px;
+    }
+    .box p {
+        font-size: 16px;
+    }
+    .graphic #camembertMobile {
+        /* margin: 0 50px; */
     }
 }
 
