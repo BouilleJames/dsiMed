@@ -459,7 +459,7 @@ main div > a {
         display: flex;
     }
     #titreC {
-        grid-row: 1 / 2;
+        grid-row: 2 / 3;
         grid-column: 1 / 13;
         margin: 100px 27px 0 27px;
         max-height: 100px;
@@ -509,10 +509,7 @@ main div > a {
     }
 }
 @media screen and (max-width: 1300px) {
-    .boxCentrale {
-        /* max-width: 134px;
-        max-height: 134px; */
-    }
+
     #titreCentral {
         font-size: 48px;
     }
@@ -552,10 +549,14 @@ main div > a {
 /* *********************************FOOTER******************************** */
 
 footer {
+    background: linear-gradient(#11417d, #fff);
+}
+
+.footer {
     height: 695px;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     background: linear-gradient(#11417d, #fff);
 }
 
@@ -581,11 +582,11 @@ footer {
     font-size: 16px;
 }
 
-#formulaire {
+.backgroundFormulaire {
     grid-column: 5;
     align-items: center;
     background-color: #285ea0;
-    border-radius: 10px #285ea0;
+    border-radius: 10px;
     box-shadow: 10px 5px 5px #989999;
     height: 80%;
     justify-content: center;
@@ -594,14 +595,19 @@ footer {
 }
 
 .group {
-    margin-top: 15px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
 
 .button {
     background-color: #fd8a69;
-    height: 40px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+    height: 53px;
+    border-radius: 5px;
+    border: 1px solid #fff;
 }
 
 #ligneSeparator {
@@ -634,43 +640,180 @@ footer {
 
 .icon {
     margin-right: 5px;
-    width: 20px;
+    width: 30px;
     height: auto;
     display: flex;
     justify-content: center;
     margin-top: 15px;
 }
 
+.icon i {
+    font-size: 25px;
+}
+
 #spaceIcon {
     margin: 0 15px 0 15px;
 }
 
-@media screen and (max-width: 600px) {
-    footer {
-        display: flex;
-        flex-wrap: wrap;
+#name, #entreprise, #mail {
+    border: 1px solid #285ea0;
+    border-radius: 5px;
+    height: 48px;
+    padding: 10px 15px 10px 15px;
+}
+
+.group {
+    padding: 0 10px 0 10px;
+}
+
+#iconContainer2 {
+    display: none;
+}
+
+/* @media screen and (max-width: 600px) {
+    .footer {
+        background: linear-gradient(#11417d, #285ea0);
+    }
+    #ligneSeparator {
+        height: 0;
     }
 
     #contact {
+        grid-column: 1 / 7;
+        grid-row: 1 / 2;
         width: 100%;
         text-align: center;
+        margin: 100px 0;
     }
 
-    .social {
-        width: 80px;
-        height: 80px;
-        display: flex;
-        justify-content: center;
+    #iconContainer .icon {
+        display: none;
     }
 
-    #iconContainer {
-        display: flex;
-        justify-content: center;
+    .backgroundFormulaire {
+        grid-column: 1 / 7;
+        grid-row: 2 / 3;
+        background-color: #285ea0;
+        height: 100%;
     }
 
     #formulaire {
-        width: 100%;
+        grid-column: 3 / 5;
+        grid-row: 2 / 3;
+        background-color: #285ea0;
+        height: 100%;
+    }
+
+    #iconContainer2 {
+        grid-column: 2 / 6;
+        grid-row: 3 / 4;
         display: flex;
         justify-content: center;
+    }
+
+    #iconContainer2 {
+        margin-bottom: 30px;
+    }
+    
+    #iconContainer2 .icon {
+        background: #ffff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+    } */
+    
+    /* .icon {
+        margin-right: 5px;
+        width: 30px;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+    }
+
+    .icon i {
+        font-size: 30px;
+    }
+    #name, #entreprise, #mail {
+        border: 1px solid #285ea0;
+        border-radius: 5px 5px 0 0;
+        height: 48px;
+        padding: 10px 15px 10px 15px;
+    }
+
+    .button {
+        margin-top: 50px;
+    }
+} */
+
+@media screen and (max-width: 600px) {
+    .footer {
+        background: linear-gradient(#11417d, #285ea0);
+    }
+
+    #ligneSeparator {
+        display: none;
+    }
+    #contact {
+        grid-column: 2 / 6;
+        grid-row: 1 / 2;
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    #contact h2 {
+        font-size: 23px;
+        font-weight: 800;
+    }
+
+    #contact p {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 22px;
+    }
+
+    #lienDsi {
+        font-size: 23px;
+        font-weight: 600;
+        line-height: 28px;
+    }
+
+    #iconContainer {
+        display: none;
+        justify-content: center;
+    }
+
+    #iconContainer2 {
+        grid-column: 3 / 5;
+        grid-row: 3 / 4;
+        display: flex;
+        justify-content: center;
+    }
+
+    #iconContainer2 .icon {
+        background: #ffff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        align-items: center;
+    }
+
+    .backgroundFormulaire {
+        grid-column: 1 / 7;
+        grid-row: 2 / 3;
+        height: 100%;
+        display: flex;
+        padding: 30px 20px 30px 20px;
+    }
+
+    #formulaire {
+        grid-column: 2 / 6;
+        grid-row: 2 / 3;
+        background: linear-gradient(#285ea0, #11417d);
+        box-shadow: 10px 5px 5px #989999;
+        border: 1px solid #285ea0;
+        border-radius: 5px;
+        height: 100%;
     }
 }
