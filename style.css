@@ -6,6 +6,8 @@
 /**************************************HEADER****************************************/
 body{
     font-family: "roboto", sans-serif;
+    background-size: cover;
+    /* min-height: 100vh; */
 }
 header{
     background-color: #d2dbe2;
@@ -48,6 +50,68 @@ li>a:hover::after {
 }
 .mobile{
     display:none;
+}
+/* ********************mediaQueries********************** */
+
+@media screen AND (max-width: 1100px) {
+    .menu li a {
+        font-size: 12px;
+        transition: .5s;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    header{
+        background-color: white;
+    }
+    .menu li a {
+        display: none;
+    }
+    .card .button_list, .card .button_formation{
+        display:none;
+    }
+    .menu>li:nth-child(1){
+        display: flex;
+    }
+    .mobile{
+        display:block;
+        color:#fafafa;
+        position: relative;
+    }
+   .fa-bars{
+    color:#fafafa;
+    }
+    .mobile .burger{
+        background: #989999;
+        height: 30px;
+        width: 30px;
+        border-radius: 5px;
+        display: grid;
+        place-items: center;
+        position: fixed;
+        top: 20px;
+        right:20px;
+        z-index: 9999999;
+    }
+    .mobile .menuburger {
+        background: rgba(0,0,0,0.5);
+        height: 0;
+        width: 100%;
+        overflow: hidden;
+        position:fixed;
+        top: 0;
+        left: 0;
+        transition: 0.5s;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        line-height: 30px;
+    }
+    .menuburger {
+        font-size: 30px;
+        line-height: 28px;
+    }
 }
 
 /**************************************SECTION****************************************/
@@ -142,11 +206,25 @@ h1{
 }
 
 /**************************************CAMEMBERT****************************************/
-.section_chiffres{
-    display: flex;
-    justify-content: center;    
+.camembert{
+    display: none;
+}
+@media screen and (max-width: 900px){
+    .carroussel{
+        display: none;
+    }
+    .camembert{
+        display: flex;
+        padding: 10px;
+        margin: ;
+    }
 }
 
+/* .section_chiffres{
+    display: flex;
+    justify-content: center;    
+} */
+/* 
 .chiffres{
     display: flex;
     color: white;
@@ -160,12 +238,12 @@ h1{
     width: 90%;
     border-radius: 10px;
     font-weight: bold;
-}
+} */
 
-.pie>img{
+/* .pie>img{
     height:200px;
-}
-
+} */
+/* 
 .chiffre_element{
     display: flex;
     flex-direction: column;
@@ -198,7 +276,7 @@ h1{
     align-items: center;
     margin: 20px;
     text-align: center;
-}
+} */
 .fleche{
     background: url(img/fleche.png);
     background-size: contain;
@@ -265,17 +343,25 @@ footer{
     color:#fafafa;
     margin: 30px 0 30px 0;;
 }
-.contact>div>a>i{
+.backIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     border: 1px solid white;
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    /* padding: 15px; */
-    margin-right: 5px;
+    margin: 10px 5px 0 0;
     color: #11417D;
     font-size: 30px;
 }
+
+.backIcon > a > i {
+    color: #11417D;
+    font-size: 40px;
+}
+
 .boxAddress {
     display: flex;
     justify-content: center;
@@ -286,9 +372,6 @@ footer{
 footer a{
     text-decoration: none;
     color: #fafafa;
-}
-.iconContainer a i {
-    display: flex;
 }
 
 hr{
@@ -393,6 +476,7 @@ input{
         font-size: 30px;
         line-height: 28px;
     }
+}
     /* ***************Lazer Effect************** */
 /* **************Sur Liens NavBar************* */
 /* li>a{
@@ -415,11 +499,29 @@ li>a:hover::after {
     left: 0;
 } */
 
-/* ********************************************* */
+/* ********************MENU BURGER************************* */
     .menuburger a{
         text-decoration: none;
         color: white;
-        font-size: 30px;    
+        font-size: 30px;  
+        position: relative;  
+    }
+    .menuburger a::after{
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -2px;
+        width: 0;
+        height: 3px;
+        background-color: #ffffff;
+        transition: 0.6s;
+    }
+    .menuburger a:hover::after {
+        width: 100%;
+        left: 0;
     }
     .mobile input{
         appearance: none;
@@ -486,8 +588,63 @@ li>a:hover::after {
     .button_list:nth-child(even){
         margin-right: 10px;
     }
+
+/* *********************carroussel*************************************** */
+#boxCarroussel{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    min-height: 50vh;
+}
+.carroussel{
+    width: 800px;
+    height: 400px;
+    border: solid 4px #fff;
+    box-shadow: 0 0 14 rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+#container{
+    width: 800px;
+    height: 400px;
 }
 
+
+.photo{
+    width: 800px;
+    height: 400px;
+    margin: 0;
+    display: inline-block;
+    background-size: cover;
+}
+.b{
+    position: absolute;
+    width: 70px;
+    cursor: pointer;
+    top: 150px;
+}
+#g{
+    left: 0;
+    opacity: 0.4;
+}
+#d{
+    right: 0;
+    opacity: 0.4;
+}
+#g:hover{
+    transform:scale(1.1);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+#d:hover{
+    transform:scale(1.1);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+/* ***************************************************** */
 /* body {
     margin: 0;
     padding: 0;
