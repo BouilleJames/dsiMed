@@ -9,6 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
+    <script defer src="app.js"></script>
     <title>Projet DSI Sensibilisation au handicap</title>
 </head>
 
@@ -92,7 +93,18 @@
             <button class="btn btn_green">LE HANDICAP</button>
         </div>
     </div>
-    <div class="section_chiffres">
+    <div id="boxCarroussel">
+        <div class="carroussel">
+            <div id="container"></div>
+            <img src="/boutonD-removebg-preview.png" class="b" id="d" alt="fleche de navigation droite pour carroussel">
+            <img src="/boutonG-removebg-preview 1.png" class="b" id="g" alt="fleche de navigation gauche pour carroussel">
+        </div>
+        <div class="camembert">
+            <img src="/charts_mobile.jpg" alt="statisques du groupe">
+        </div>
+    </div>
+    
+    <!-- <div class="section_chiffres">
         <div class="chiffres">
             <div class="chiffre_element">
                 <div class=vector>
@@ -120,7 +132,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <footer>
         <div class="contact">
             <h2>CONTACTEZ NOUS</h2>
@@ -135,11 +147,20 @@
             </div>
 
             <div id="iconContainer" >
-                <a href="https://www.facebook.com/DistributionServiceInternational/"><i
+                <div class="backIcon">
+                    <a href="https://www.facebook.com/DistributionServiceInternational/"><i
                         class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://twitter.com/group_dsi_fr"><i class="fa-brands fa-twitter"></i></a>
-                <a href="https://www.linkedin.com/company/dsi-france?originalSubdomain=fr"><i
+                </div>
+                <div class="backIcon">
+                    <a href="https://twitter.com/group_dsi_fr"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="backIcon">
+                    <a href="https://www.linkedin.com/company/dsi-france?originalSubdomain=fr"><i
                         class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+                
+                
+                
             </div>
         </div>
         <hr>
