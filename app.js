@@ -1,7 +1,7 @@
 // fenetre pop-up
 
 // function ouvrirPopup() {
-//     window.open("https://www.example.com", "nom_de_la_fenetre", "height=400,width=400");
+//     window.open("https://www.dsi-ap.com/site_dsi/nous-connaitre/entreprise-adaptee.html", "Entreprise adaptée", "height=400,width=400");
 //   }
  
 
