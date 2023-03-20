@@ -64,7 +64,7 @@ li>a:hover::after {
     header{
         background-color: white;
     }
-    .menu li a {
+    .menu li a{
         display: none;
     }
     .card .button_list, .card .button_formation{
@@ -83,8 +83,8 @@ li>a:hover::after {
     }
     .mobile .burger{
         background: #989999;
-        height: 30px;
-        width: 30px;
+        height: 45px;
+        width: 45px;
         border-radius: 5px;
         display: grid;
         place-items: center;
@@ -169,8 +169,6 @@ h1{
     width: 190px;
     border-radius: 10px;
     border: none;
-    /* padding: 10px;
-    margin: 10px; */
     color: white;
     font-size: 14px;
     box-shadow: 8px 8px #bcbbbb;
@@ -221,6 +219,14 @@ h1{
 }
 
 @media screen and (max-width: 900px){
+        .button_list{ 
+            position: relative;
+            z-index: -1;
+        }
+        .button_formation{
+            position: relative;
+            z-index: -1;
+        }
         .carroussel{
             display: none;
         }
@@ -285,7 +291,7 @@ h1{
     @media screen and (max-width: 499px){
 
         .mobile{
-            padding-left: 5%;
+            /* padding-left: 5%; */
         }
         #button_list_mobile {
             background-color: #d2dbe2;
@@ -384,7 +390,7 @@ h1{
     margin: 20px;
     text-align: center;
 } */
-.fleche{
+/* .fleche{
     background: url(img/fleche.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -424,7 +430,7 @@ h1{
     display: flex;
     align-items: center;
     margin: 20px;
-}
+} */
 /**************************************FOOTER****************************************/
 
 footer{
@@ -472,8 +478,7 @@ footer{
 .boxAddress {
     display: flex;
     justify-content: center;
-    width: 350px;
-    
+    width: 350px; 
 }
 
 footer a{
@@ -553,9 +558,9 @@ input{
     color:#fafafa;
     }
     .mobile .burger{
-        background: #989999;
-        height: 30px;
-        width: 30px;
+        /* background: #989999; */
+        height: 40px;
+        width: 40px;
         border-radius: 5px;
         display: grid;
         place-items: center;
@@ -654,7 +659,6 @@ li>a:hover::after {
         flex-direction: column;
     }
     .button_list {
-        /* flex-direction: column; */
         flex-wrap: wrap;
         align-items: center;
     }
