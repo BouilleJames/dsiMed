@@ -62,14 +62,21 @@
         </div>
     </section>
     <div class="card">
-        <div class="button_list">
-            <button class="btn_orange">QU'EST CE QU'UNE ENTREPRISE ADAPTEE?</button>
+        <div class="button_list first">
+            <button class="btn_orange box"><a href="#popup1" class="button">QU'EST CE QU'UNE ENTREPRISE ADAPTEE?</a></button>
+            <div id="popup1" class="overlay">
+                <div class="popup1">
+                    <h2>QU'EST CE QU'UNE ENTREPRISE ADAPTEE ?</h2>
+                    <a href="#" class="cross">&times;</a>
+                    <img src="/image/carroussel6.jpg" alt="photo">
+                </div>
+            </div>
             <button class="btn_blue">LE ROLE DU REFERENT HANDICAP</button>
             <button class="btn_green">METHODE D'INTEGRATION</button>
             <button class="btn_grey">PARTICULARITE DU RECRUTEMENT</button>
         </div>
         <div class="button_formation">
-            <button>DéCOUVREZ NOS FORMATIONS</button>
+            <button onclick="openLink()" id="Sensibilisation">DéCOUVREZ NOS SENSIBILISATIONS</button>
         </div>
         <div class="button_list">
             <button class="btn_blue">LE MAINTIEN DANS L'EMPLOI</button>
@@ -96,8 +103,8 @@
     <div id="boxCarroussel">
         <div class="carroussel">
             <div id="container"></div>
-            <img src="/boutonD-removebg-preview.png" class="b" id="d" alt="fleche de navigation droite pour carroussel">
-            <img src="/boutonG-removebg-preview 1.png" class="b" id="g" alt="fleche de navigation gauche pour carroussel">
+            <img src="/boutonD-removebg-preview.png" class="b" id="d">
+            <img src="/boutonG-removebg-preview 1.png" class="b" id="g">
         </div>
         <div class="camembert">
             <img src="/charts_mobile.jpg" alt="statisques du groupe">
@@ -367,3 +374,28 @@
 </body>
 
 </html>  -->
+
+
+<!-- // HTML
+<button onclick="openPopup()">Ouvrir la popup</button>
+<div id="popup" style="display: none;">
+  <p>Ceci est une popup.</p>
+  <button onclick="closePopup()">Fermer</button>
+</div>
+
+// JavaScript
+function openPopup() {
+  document.getElementById("popup").style.display = "block";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+} -->
+<!-- Dans cet exemple,nous avons un bouton qui, lorsqu'il est cliqué,
+ appelle la fonction openPopup().
+ Cette fonction sélectionne l'élément HTML avec l'ID "popup"
+  et définit sa propriété display à "block",ce qui le rend visible.-->
+
+  <!-- Pour la suite ??? essaie ca :
+ au moment du click appeler la fonction openPopup
+  et si on click encore la Popup se ferme .  -->

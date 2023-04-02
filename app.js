@@ -38,7 +38,13 @@
 // // Ajout des écouteurs d'événements sur les boutons
 // nextBtn.addEventListener('click', nextSlide);
 // prevBtn.addEventListener('click', prevSlide);
+/////////////////////////Bouton sensibilisation ligne 79 from html///////////////////////////////
+// sensibilisation.addEventListener('click', pageDeSensibilisation);
+function openLink() {
+    window.location.href= "https://www.dsi-ap.com/site_dsi/vos-avantages.html";
+}
 
+  //////////////////////////////////////////////////////////////
 
 document.body.onload=function(){
     nbr=8;
