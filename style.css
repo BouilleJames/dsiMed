@@ -214,15 +214,6 @@ h1{
         margin: 20px 0 50px 0;
     }
 }
-/* @media screen and (min-width: 901px){
-        .button_list>button:nth-child(odd){
-            margin-top: 80px;
-            margin-left:40px;
-        }
-        .button_list:nth-child(even){
-            margin-right: 10px;
-        }
-} */
 
 @media screen and (max-width: 900px){
         .button_list{ 
@@ -337,104 +328,7 @@ h1{
         }
     }
 
-/* .section_chiffres{
-    display: flex;
-    justify-content: center;    
-} */
-/* 
-.chiffres{
-    display: flex;
-    color: white;
-    background: linear-gradient(to right, grey, white, grey);
-    display: flex;
-    flex-direction: row;
-    align-items: center; 
-    justify-content: center;
-    padding: 20px;
-    margin: 50px 0px;
-    width: 90%;
-    border-radius: 10px;
-    font-weight: bold;
-} */
 
-/* .pie>img{
-    height:200px;
-} */
-/* 
-.chiffre_element{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-.chiffre_element>div>p>span{
-    color: black;
-}
-.chiffre_element>div>img{
-    height: 70px;
-}
-
-.vector{
-    background: url(img/Vector.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    margin: 20px;
-}
-.acces{
-    background: url(img/acces.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    margin: 20px;
-    text-align: center;
-} */
-/* .fleche{
-    background: url(img/fleche.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    margin: 20px;
-}
-.user{
-    background: url(img/user.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    margin: 20px;
-}
-.board{
-    background: url(img/board.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    margin: 20px;
-    margin-left: 150px;
-}
-.cake{
-    background: url(img/cake.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    margin: 20px;
-} */
 /**************************************FOOTER****************************************/
 
 footer{
@@ -522,13 +416,10 @@ footer .boxAddress address {
     display: flex;
     justify-content: space-between;
 }
-
-
 input{
     margin-bottom: 10px;
     height: 48px;
 }
-
 .send{
     height: auto;
     border-radius: 2px;
@@ -562,7 +453,6 @@ input{
     color:#fafafa;
     }
     .mobile .burger{
-        /* background: #989999; */
         height: 40px;
         width: 40px;
         border-radius: 5px;
@@ -592,11 +482,6 @@ input{
         font-size: 30px;
         line-height: 28px;
     }
-    /* .button_formation{
-        position: relative;
-        z-index: -1;
-    } */
-
 }
 
 
